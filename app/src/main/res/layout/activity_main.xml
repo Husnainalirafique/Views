@@ -19,12 +19,23 @@
                 android:id="@+id/btToTextViewActivity"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#1DE9B6"
+                android:background="#FF9100"
                 android:text="Text View"
                 android:textSize="20sp"
                 android:textColor="@color/black"
                 android:textAllCaps="false">
 
+            </androidx.appcompat.widget.AppCompatButton>
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btToEditTextActivity"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#FF9100"
+                android:text="Edit Text"
+                android:layout_marginTop="20dp"
+                android:textSize="20sp"
+                android:textColor="@color/black"
+                android:textAllCaps="false">
             </androidx.appcompat.widget.AppCompatButton>
         </LinearLayout>
     </ScrollView>

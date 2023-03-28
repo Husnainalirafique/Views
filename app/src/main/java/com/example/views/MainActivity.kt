@@ -18,7 +18,11 @@ class MainActivity : AppCompatActivity() {
 
     private fun handlingClicks() {
         findViewById<Button>(R.id.btToTextViewActivity).setOnClickListener {
-            val intent = Intent(this,TextView::class.java)
+           val intent = Intent(this,TextView::class.java)
+            startActivity(intent)
+        }
+        findViewById<Button>(R.id.btToEditTextActivity).setOnClickListener {
+            val intent = Intent(this,EditText::class.java)
             startActivity(intent)
         }
     }

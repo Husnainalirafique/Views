@@ -18,4 +18,44 @@
         app:autoSizeStepGranularity="2sp"
         android:autoSizeTextType="uniform"
         />
+    <!--Text must be entered here-->
+    <EditText
+        android:id="@+id/txtCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:layout_gravity="center"
+        android:layout_above="@id/btnCopy"
+        android:layout_centerHorizontal="true"
+        android:hint="Type something..." />
+
+    <!--Text entered in the above field gets copied to
+        Clipboard on this button click-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnCopy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:backgroundTint="#FF9100"
+        android:layout_gravity="center"
+        android:text="Copy to Clipboard" />
+
+    <TextView
+        android:id="@+id/txtShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="100dp"
+        android:layout_gravity="center"
+        android:layout_above="@id/btnShow"
+        android:background="@drawable/rounded_corner_view"
+        android:hint="Clipboard Data" />
+
+    <!--*on this button click-->
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btnShow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:backgroundTint="#FF9100"
+        android:text="Show Clipboard Data" />
 </LinearLayout>
