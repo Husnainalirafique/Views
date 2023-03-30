@@ -7,91 +7,126 @@
     android:orientation="vertical"
     tools:context=".EditText"
     tools:ignore="HardcodedText">
+   <ScrollView
+       android:layout_width="match_parent"
+       android:layout_height="match_parent">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="match_parent"
+           android:orientation="vertical"
+           android:padding="5dp"
+           >
+           <androidx.appcompat.widget.AppCompatButton
+               android:layout_width="300dp"
+               android:layout_gravity="center"
+               android:layout_height="wrap_content"
+               android:text="Custom EditText"
+               android:background="@drawable/bt_bg"
+               android:textColor="@color/black"
+               android:layout_marginTop="10dp"
+               />
+           <androidx.appcompat.widget.AppCompatEditText
+               android:id="@+id/et1"
+               android:layout_width="match_parent"
+               android:layout_height="wrap_content"
+               android:layout_marginTop="20dp"
+               android:hint="Enter your phone number"
+               android:inputType="number"
+               android:textSize="30sp" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:id="@+id/et1"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Enter your phone number"
-        android:inputType="number"
-        android:textSize="30sp" />
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/bt"
+               android:layout_width="300dp"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:background="@drawable/bt_bg"
+               android:layout_marginTop="20dp"
+               android:textColor="@color/black"
+               android:text="Get text" />
 
-    <androidx.appcompat.widget.AppCompatButton
-        android:id="@+id/bt"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="#FF9100"
-        android:text="Get text" />
+           <androidx.appcompat.widget.AppCompatEditText
+               android:layout_width="match_parent"
+               android:layout_height="50dp"
+               android:inputType="numberPassword"
+               android:maxLength="6"
+               android:hint="Enter 6 digit password"
+               android:layout_marginTop="20dp"
+               android:textColorHighlight="@android:color/holo_orange_light" />
 
-    <androidx.appcompat.widget.AppCompatEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:inputType="numberPassword"
-        android:maxLength="6"
-        android:hint="Enter 6 digit password"
-        android:textColorHighlight="@android:color/holo_orange_light" />
+           <EditText
+               android:id="@+id/etEmail"
+               android:layout_width="match_parent"
+               android:layout_height="55dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginTop="20dp"
+               android:layout_marginEnd="15dp"
+               android:autofillHints=""
+               android:hint="Email"
+               android:paddingLeft="10dp"
+               android:drawableLeft="@drawable/email_edittext_logo"
+               android:drawablePadding="10dp"
+               android:background="@drawable/edittext_background"
+               android:inputType="textEmailAddress" />
 
-    <EditText
-        android:id="@+id/etEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginTop="64dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints=""
-        android:hint="Email"
-        android:inputType="textEmailAddress" />
+           <!--this is the email password field-->
+           <EditText
+               android:id="@+id/etPassword"
+               android:layout_width="match_parent"
+               android:layout_height="55dp"
+               android:layout_marginStart="15dp"
+               android:layout_marginEnd="15dp"
+               android:paddingLeft="10dp"
+               android:drawablePadding="10dp"
+               android:layout_marginTop="10dp"
+               android:autofillHints=""
+               android:hint="Password"
+               android:background="@drawable/edittext_background"
+               android:drawableLeft="@drawable/password_edittext_logo"
+               android:inputType="textPassword" />
 
-    <!--this is the email password field-->
-    <EditText
-        android:id="@+id/etPassword"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="16dp"
-        android:layout_marginEnd="16dp"
-        android:autofillHints=""
-        android:hint="Password"
-        android:inputType="textPassword" />
+           <!--login button which set to be false for the enabled attribute-->
+           <androidx.appcompat.widget.AppCompatButton
+               android:id="@+id/loginButton"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:layout_marginTop="16dp"
+               android:background="@drawable/bt_bg"
+               android:textColor="@color/black"
+               android:enabled="false"
+               android:text="LOGIN" />
 
-    <!--login button which set to be false for the enabled attribute-->
-    <Button
-        android:id="@+id/loginButton"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:layout_marginTop="16dp"
-        android:enabled="false"
-        android:text="LOGIN" />
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/my_text_input_layout"
-        android:layout_width="300dp"
-        android:layout_height="wrap_content"
-        android:hint="Enter text here"
-        android:textColorHint="@color/black"
-        android:layout_gravity="center"
-        app:boxStrokeWidth="2dp"
-        android:layout_marginTop="20dp"
-        app:passwordToggleEnabled="true">
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/my_text_input_edit_text"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            />
-    </com.google.android.material.textfield.TextInputLayout>
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Masking"
-        android:layout_marginTop="30dp"
-        android:textSize="30sp"/>
-    <com.vicmikhailau.maskededittext.MaskedEditText
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:hint="+92 (346) 375 2125"
-        android:inputType="number"
-        app:mask="+## (###) ### ####" />
+           <com.google.android.material.textfield.TextInputLayout
+               android:id="@+id/my_text_input_layout"
+               android:layout_width="300dp"
+               android:layout_height="wrap_content"
+               android:hint="Enter text here"
+               android:layout_gravity="center"
+               app:boxStrokeWidth="2dp"
+               android:layout_marginTop="20dp"
+               app:passwordToggleEnabled="true">
+               <com.google.android.material.textfield.TextInputEditText
+                   android:id="@+id/my_text_input_edit_text"
+                   android:layout_width="match_parent"
+                   android:layout_height="wrap_content"
+                   android:lines="1"
+                   />
+           </com.google.android.material.textfield.TextInputLayout>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:layout_gravity="center"
+               android:text="Masking"
+               android:layout_marginTop="30dp"
+               android:textSize="30sp"/>
+           <com.vicmikhailau.maskededittext.MaskedEditText
+               android:layout_width="170dp"
+               android:layout_height="50dp"
+               android:layout_marginTop="20dp"
+               android:hint="+92 (346) 375 2125"
+               android:layout_gravity="center"
+               android:inputType="number"
+               app:mask="+## (###) ### ####" />
+       </LinearLayout>
+   </ScrollView>
 </LinearLayout>

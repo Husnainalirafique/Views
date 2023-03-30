@@ -13,4 +13,8 @@
         <item name="android:statusBarColor">#FF9100</item>
         <!-- Customize your theme here. -->
     </style>
+    <style name="bt_Style" >
+        <item name="android:width">300dp</item>
+        <item name="android:textColor">@color/black</item>
+    </style>
 </resources>
