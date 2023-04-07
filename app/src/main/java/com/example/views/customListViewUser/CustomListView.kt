@@ -1,19 +1,22 @@
-package com.example.views
+package com.example.views.customListViewUser
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.widget.ImageView
+import android.widget.TextView
 import androidx.core.content.ContextCompat
 import androidx.databinding.DataBindingUtil
+import com.example.views.R
 import com.example.views.databinding.ActivityCustomListViewBinding
+import com.example.views.gridView.customGridViewArrayAdapter.ShowUserData
 
 class CustomListView : AppCompatActivity() {
     private lateinit var binding: ActivityCustomListViewBinding
     private lateinit var userArrayList: ArrayList<User>
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = DataBindingUtil.setContentView(
-            this, R.layout.activity_custom_list_view
-        )
+        binding = DataBindingUtil.setContentView(this, R.layout.activity_custom_list_view)
         //functions
         actionBar()
         //Custom ListView
@@ -40,12 +43,24 @@ class CustomListView : AppCompatActivity() {
             userArrayList.add(user)
         }
         binding.customListView.adapter = MyAdapter(this, userArrayList)
+
+        binding.customListView.setOnItemClickListener { parent, view, position, id ->
+            val clickedItemImageView = view.findViewById<ImageView>(R.id.profile_pic)
+            val clickedItemTextView = view.findViewById<TextView>(R.id.user_name)
+            val clickedItemImageResId = userArrayList[position].imgId
+            val clickedItemText = clickedItemTextView.text.toString()
+
+            val intent = Intent(this, ShowUserData::class.java)
+            intent.putExtra("imageResId", clickedItemImageResId)
+            intent.putExtra("text", clickedItemText)
+            startActivity(intent)
+        }
     }
 
     private fun actionBar() {
         supportActionBar?.hide()
         val window = window
         window.statusBarColor = ContextCompat.getColor(this, R.color.black)
-
     }
+
 }

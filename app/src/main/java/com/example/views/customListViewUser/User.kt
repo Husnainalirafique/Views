@@ -1,4 +1,4 @@
-package com.example.views
+package com.example.views.customListViewUser
 
 data class User(
     var name: String,

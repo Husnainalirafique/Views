@@ -1,13 +1,11 @@
-package com.example.views
+package com.example.views.editText
 
 import android.annotation.SuppressLint
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
 import android.text.TextWatcher
-import android.widget.Button
 import android.widget.Toast
-import androidx.appcompat.widget.ButtonBarLayout
 import com.example.views.databinding.ActivityEditTextBinding
 
 class EditText : AppCompatActivity() {

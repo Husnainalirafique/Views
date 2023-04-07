@@ -1,15 +1,13 @@
-package com.example.views
+package com.example.views.textView
 
-import android.annotation.SuppressLint
 import android.content.ClipData
 import android.content.ClipboardManager
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.view.View
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
+import com.example.views.R
 
 class TextView : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {

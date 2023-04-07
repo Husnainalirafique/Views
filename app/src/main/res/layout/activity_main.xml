@@ -1,76 +1,97 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    xmlns:tools="http://schemas.android.com/tools">
 
-    <ScrollView
+    <data>
+
+    </data>
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:background="@color/black"
+        tools:context=".MainActivity">
 
-        <LinearLayout
+        <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="match_parent">
 
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btToTextViewActivity"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="#FF9100"
-                android:text="Text View"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textAllCaps="false">
+                android:orientation="vertical">
 
-            </androidx.appcompat.widget.AppCompatButton>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btToEditTextActivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FF9100"
-                android:text="Edit Text"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textAllCaps="false">
-            </androidx.appcompat.widget.AppCompatButton>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btToImageViewActivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FF9100"
-                android:text="Image View"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textAllCaps="false">
-            </androidx.appcompat.widget.AppCompatButton>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btToListViewActivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FF9100"
-                android:text="List View"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textAllCaps="false">
-            </androidx.appcompat.widget.AppCompatButton>
-            <androidx.appcompat.widget.AppCompatButton
-                android:id="@+id/btToCustomListViewActivity"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:background="#FF9100"
-                android:text="Custom List View"
-                android:layout_marginTop="20dp"
-                android:textSize="20sp"
-                android:textColor="@color/black"
-                android:textAllCaps="false">
-            </androidx.appcompat.widget.AppCompatButton>
-        </LinearLayout>
-    </ScrollView>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToTextViewActivity"
+                    style="@style/bt_style"
+                    android:text="Text View"
+                    >
+                </androidx.appcompat.widget.AppCompatButton>
 
-</LinearLayout>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToEditTextActivity"
+                    style="@style/bt_style"
+                    android:text="Edit Text"
+                    >
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToImageViewActivity"
+                    style="@style/bt_style"
+                    android:text="Image View"
+                    >
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToListViewActivity"
+                    style="@style/bt_style"
+                    android:text="List View"
+                    >
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToCustomListViewActivity"
+                    style="@style/bt_style"
+                    android:text="Custom List View"
+
+                    >
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToScrollViewActivity"
+                    style="@style/bt_style"
+                    android:text="Scroll View"
+
+                    >
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToNestedScrollViewActivity"
+                    style="@style/bt_style"
+                    android:text="Nested Scroll View">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToCardViewActivity"
+                    style="@style/bt_style"
+                    android:text="Card View">
+
+                </androidx.appcompat.widget.AppCompatButton>
+
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToGridViewActivity"
+                    style="@style/bt_style"
+                    android:text="Grid View">
+
+                </androidx.appcompat.widget.AppCompatButton>
+            </LinearLayout>
+        </ScrollView>
+
+    </LinearLayout>
+</layout>
