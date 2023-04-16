@@ -1,6 +1,5 @@
 package com.example.views.gridView.customGridViewArrayAdapter
 
-import android.annotation.SuppressLint
 import android.app.Activity
 import android.view.LayoutInflater
 import android.view.View
@@ -18,18 +17,30 @@ class SimpleGridViewAdapter(
     R.layout.simple_grid_item,
     arrayList
 ) {
-    @SuppressLint("ViewHolder", "InflateParams")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
+        var itemView = convertView
+        val viewHolder: ViewHolder
 
-        val view = LayoutInflater.from(context).inflate(R.layout.simple_grid_item, null)
-
-        val simpleGridViewAdapterImg: ImageView = view.findViewById(R.id.simple_grid_view_img)
-        val simpleGridViewAdapterText: TextView = view.findViewById(R.id.simple_grid_view_text)
+        if (itemView == null) {
+            itemView = LayoutInflater.from(context).inflate(R.layout.simple_grid_item, parent,false)
+            viewHolder = ViewHolder(itemView)
+            if (itemView != null) {
+                itemView.tag = viewHolder
+            }
+        } else {
+            viewHolder = itemView.tag as ViewHolder
+        }
 
         val itemPosition = arrayList[position]
-        simpleGridViewAdapterImg.setImageResource(itemPosition.simpleGridViewDataImg)
-        simpleGridViewAdapterText.text = itemPosition.simpleGridViewDataName
+        viewHolder.img.setImageResource(itemPosition.simpleGridViewDataImg)
+        viewHolder.txt.text = itemPosition.simpleGridViewDataName
+        return itemView!!
+    }
 
-        return view
+    private class ViewHolder(view: View) {
+        val img: ImageView = view.findViewById(R.id.simple_grid_view_img)
+        val txt: TextView = view.findViewById(R.id.simple_grid_view_text)
     }
 }
+
+

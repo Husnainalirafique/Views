@@ -90,6 +90,12 @@
                     android:text="Grid View">
 
                 </androidx.appcompat.widget.AppCompatButton>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToWebViewActivity"
+                    style="@style/bt_style"
+                    android:text="Web View">
+
+                </androidx.appcompat.widget.AppCompatButton>
             </LinearLayout>
         </ScrollView>
 

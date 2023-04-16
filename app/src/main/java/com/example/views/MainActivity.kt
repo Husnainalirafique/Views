@@ -15,6 +15,7 @@ import com.example.views.scrollView.NestedScrollView
 import com.example.views.scrollView.ScrollView
 import com.example.views.simpleListView.ListView
 import com.example.views.textView.TextView
+import com.example.views.webview.WebView
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -60,6 +61,9 @@ class MainActivity : AppCompatActivity() {
         }
         binding.btToGridViewActivity.setOnClickListener {
             startActivity(Intent(this, GridView::class.java))
+        }
+        binding.btToWebViewActivity.setOnClickListener {
+            startActivity(Intent(this, WebView::class.java))
         }
     }
 
