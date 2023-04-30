@@ -9,15 +9,8 @@ import android.widget.ArrayAdapter
 import android.widget.TextView
 import com.example.views.R
 
-class MyAdapter(
-    private val context: Activity,
-    private val arrayList: ArrayList<User>
-) :
-    ArrayAdapter<User>(
-        context,
-        R.layout.custom_list_item,
-        arrayList
-    ) {
+class MyAdapter(private val context: Activity, private val arrayList: ArrayList<User>)
+    : ArrayAdapter<User>(context, R.layout.custom_list_item, arrayList) {
     @SuppressLint("ViewHolder")
     override fun getView(position: Int, convertView: View?, parent: ViewGroup): View {
 

@@ -24,27 +24,17 @@ class CustomListView : AppCompatActivity() {
     }
 
     private fun customListView() {
-        val imageId =
-            intArrayOf(R.drawable.p1, R.drawable.p2, R.drawable.p3, R.drawable.p4, R.drawable.p5)
-        val userName =
-            arrayOf("Husnain", "Danish", "Usama", "Ali", "Hamza")
-        val lastMsg = arrayOf(
-            "Test. Is this working?",
-            "Dummy text. Please ignore.",
-            "Testing, 1 2 3. Have a good day!",
-            "New phone test. Disregard. Thanks!",
-            "Test message. Please ignore."
-        )
-        val lastMsgTime = arrayOf("7:00 pm", "7:00 pm", "7:00 pm", "7:00 pm", "7:00 pm")
-
         userArrayList = ArrayList()
-        for (i in userName.indices) {
-            val user = User(userName[i], lastMsg[i], lastMsgTime[i], imageId[i])
-            userArrayList.add(user)
+        userArrayList.apply{
+            add(User("Husnain", "Test. Is this working?", "7:00 pm", R.drawable.p1))
+            add(User("Danish", "Dummy text. Please ignore.", "7:00 pm", R.drawable.p2))
+            add(User("Adeel", "Testing, 1 2 3. Have a good day!", "7:00 pm", R.drawable.p3))
+            add(User("Hamza", "New phone test. Disregard. Thanks!", "7:00 pm", R.drawable.p4))
+            add(User("Usama", "Test message. Please ignore.", "7:00 pm", R.drawable.p5))
         }
-        binding.customListView.adapter = MyAdapter(this, userArrayList)
-
-        binding.customListView.setOnItemClickListener { parent, view, position, id ->
+        val listview = binding.customListView
+        listview.adapter = MyAdapter(this, userArrayList)
+        listview.setOnItemClickListener { parent, view, position, id ->
             val clickedItemImageView = view.findViewById<ImageView>(R.id.profile_pic)
             val clickedItemTextView = view.findViewById<TextView>(R.id.user_name)
             val clickedItemImageResId = userArrayList[position].imgId

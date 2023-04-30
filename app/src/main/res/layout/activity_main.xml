@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
+    xmlns:tools="http://schemas.android.com/tools"
+
+    >
 
     <data>
 
@@ -95,6 +97,16 @@
                     style="@style/bt_style"
                     android:text="Web View">
 
+                </androidx.appcompat.widget.AppCompatButton>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToSearchViewActivity"
+                    style="@style/bt_style"
+                    android:text="Search View simple list view">
+                </androidx.appcompat.widget.AppCompatButton>
+                <androidx.appcompat.widget.AppCompatButton
+                    android:id="@+id/btToBottomNavigationViewActivity"
+                    style="@style/bt_style"
+                    android:text="Bottom Navigation">
                 </androidx.appcompat.widget.AppCompatButton>
             </LinearLayout>
         </ScrollView>

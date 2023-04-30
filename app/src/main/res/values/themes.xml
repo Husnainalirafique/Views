@@ -23,4 +23,10 @@
         <item name="textAllCaps">false</item>
         <item name="android:textSize">20sp</item>
     </style>
+    <style name="Theme.Views.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Views.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Views.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>
